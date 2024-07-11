@@ -4,7 +4,6 @@ import HomePage from "./pages/HomePage";
 import AuthCallbackPage from "./pages/AuthCallbackPage";
 import UserProfilePage from "./pages/UserProfilePage";
 import ProtectedRoute from "./auth/ProtectedRoute";
-import ManageRestaurantForm from "./forms/manage-restaurant-form/ManageRestaurantForm";
 import ManageRestaurantPage from "./pages/ManageRestaurantPage";
 
 const AppRoutes = () => {
