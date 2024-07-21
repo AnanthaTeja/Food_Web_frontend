@@ -1,5 +1,5 @@
 import { cusineList } from "@/config/restaurant-options-config";
-import { BookOpenCheck, Check, ChevronDown, ChevronUp } from "lucide-react";
+import { Check, ChevronDown, ChevronUp } from "lucide-react";
 import { Label } from "./ui/label";
 import { ChangeEvent } from "react";
 import { Button } from "./ui/button";

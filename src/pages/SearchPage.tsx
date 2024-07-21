@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { UseSearchRestaurants } from "@/api/RestaurantApi";
 import CusinesFilter from "@/components/CusinesFilter";
 import PaginationSelector from "@/components/PaginationSelector";
