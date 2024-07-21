@@ -1,0 +1,53 @@
+import { DropdownMenuItem } from "@radix-ui/react-dropdown-menu";
+import { Button } from "./ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuTrigger,
+} from "./ui/dropdown-menu";
+
+type Props = {
+  onChange: (value: string) => void;
+  sortOption: string;
+};
+const SORT_OPTIONS = [
+  {
+    label: "Best Match",
+    value: "bestMatch",
+  },
+  {
+    label: "Delivery Price",
+    value: "deliveryPrice",
+  },
+  {
+    label: "Estimated delivery time",
+    value: "estimatedDeliveryTime",
+  },
+];
+
+const SortoptionDropDown = ({ onChange, sortOption }: Props) => {
+  const selectedSortLabel =
+    SORT_OPTIONS.find((option) => option.value === sortOption)?.label ||
+    SORT_OPTIONS[0].label;
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger className="cursor-pointer text-gray-500">
+        <Button variant="outline" className="w-full">
+          Sort by: {selectedSortLabel}
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent>
+        {SORT_OPTIONS.map((option) => (
+          <DropdownMenuItem
+            className="cursor-pointer"
+            onClick={() => onChange(option.value)}
+          >
+            {option.label}
+          </DropdownMenuItem>
+          // return <div className="cursor-pointer text-gray-500"></div>
+        ))}
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+};
+export default SortoptionDropDown;
